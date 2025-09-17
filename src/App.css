@@ -100,6 +100,58 @@ body {
   transform: translateY(-5px);
   border-color: var(--primary-color);
 }
+.logo-shimmer {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,      
+    #22c55e 50%,     
+    #ffffff 100%     
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-logo 3s linear infinite;
+}
+
+@keyframes shimmer-logo {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+
+.shimmer-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #3b82f6 0%,      
+    #22c55e 50%,     
+    #3b82f6 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

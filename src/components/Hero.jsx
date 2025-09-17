@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaSpotify } from "react-icons/fa";
+import { SiSlack, SiNetflix, SiAirbnb } from "react-icons/si";
+import { FcGoogle } from "react-icons/fc";
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -8,12 +11,21 @@ const Hero = () => {
     }
   };
 
+  const logos = [
+    { id: "spotify", Icon: FaSpotify, label: "Spotify" },
+    { id: "slack", Icon: SiSlack, label: "Slack" },
+    { id: "netflix", Icon: SiNetflix, label: "Netflix" },
+    { id: "google", Icon: FcGoogle, label: "Google" },
+    { id: "airbnb", Icon: SiAirbnb, label: "Airbnb" },
+  ];
+
   return (
     <section id="home" style={{
       padding: '160px 0 80px',
       textAlign: 'center',
       backgroundColor: '#162033',
-      backgroundImage: 'linear-gradient(135deg, #162033 0%, #1e2a42 100%)'
+      backgroundImage: 'linear-gradient(135deg, #162033 0%, #1e2a42 100%)',
+      position: 'relative'
     }}>
       <div style={{
         maxWidth: '800px',
@@ -26,7 +38,10 @@ const Hero = () => {
           color: '#ffffff',
           fontWeight: '700',
           lineHeight: '1.2'
-        }}>We Build Digital Experiences That Drive Results</h1>
+        }}
+        >We Build Digital Experiences That 
+        <span className="shimmer-text"> Drive Results</span>
+         </h1>
         
         <p style={{
           fontSize: '1.3rem',
@@ -77,22 +92,39 @@ const Hero = () => {
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '40px',
-            flexWrap: 'wrap'
+            gap: '30px',
+            flexWrap: 'wrap',
+            alignItems: 'center'
           }}>
-            {['Google', 'Microsoft', 'Amazon', 'Apple', 'Facebook'].map((logo, index) => (
-              <div key={index} style={{
-                width: '120px',
-                height: '60px',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                borderRadius: '8px',
+            {logos.map(({ id, Icon, label }) => (
+              <div key={id} style={{
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'center',
-                color: 'rgba(255, 255, 255, 0.7)',
-                fontWeight: '600',
-                backdropFilter: 'blur(10px)'
-              }}>{logo}</div>
+                gap: '8px'
+              }}>
+                <div style={{
+                  padding: '15px',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.3s',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <Icon style={{
+                    fontSize: '2rem',
+                    color: '#ffffff'
+                  }} />
+                </div>
+                <span style={{
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  fontSize: '0.9rem',
+                  fontWeight: '500'
+                }}>{label}</span>
+              </div>
             ))}
           </div>
         </div>

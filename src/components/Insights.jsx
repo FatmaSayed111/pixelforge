@@ -1,4 +1,9 @@
 import React from 'react';
+import insights1 from '../assets/images/insights1.png'
+import insights2 from '../assets/images/insights2.png'
+import insights3 from '../assets/images/insights3.png'
+import insights4 from '../assets/images/insights4.png'
+
 
 const Insights = () => {
   const articles = [
@@ -8,28 +13,32 @@ const Insights = () => {
       description: "Discover how artificial intelligence is reshaping the landscape of enterprise solutions, from automating complex workflows to unlocking predictive insights that drive strategic decision-making.",
       author: "Maria Garcia",
       date: "October 26, 2023",
-      featured: true
+      featured: true,
+      images: insights1
     },
     {
       category: "UI/UX Design",
       title: "10 Usability Heuristics for Modern Web Apps",
       author: "David Chen",
       date: "Oct 15, 2023",
-      featured: false
+      featured: true,
+      images:insights2
     },
     {
       category: "Development",
       title: "Scaling Your Application with Serverless Architecture",
       author: "Sarah Lee",
       date: "Sep 28, 2023",
-      featured: false
+      featured: true,
+      images:insights3
     },
     {
       category: "Business",
       title: "How to Calculate ROI for a Custom Software Project",
       author: "Alex Johnson",
       date: "Sep 10, 2023",
-      featured: false
+      featured: true,
+      images:insights4
     }
   ];
 
@@ -93,7 +102,15 @@ const Insights = () => {
                   justifyContent: 'center',
                   color: 'rgba(255, 255, 255, 0.7)'
                 }}>
-                  Featured Image
+                  <img 
+                    src={article.images} 
+                    alt={article.title} 
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }} 
+                  />
                 </div>
               )}
               

@@ -30,12 +30,7 @@ const Header = () => {
         justifyContent: 'space-between',
         alignItems: 'center'
       }}>
-        <div style={{
-          fontSize: '1.8rem',
-          fontWeight: 'bold',
-          color: '#2fbb8b'
-        }}>PixelForge</div>
-        
+        <h1 className="logo-shimmer">PixelForge</h1>
         <nav style={{
           display: 'flex',
           gap: '2rem',

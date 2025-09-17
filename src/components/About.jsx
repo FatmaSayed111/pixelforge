@@ -1,5 +1,9 @@
 import React from 'react';
 
+import leader1 from '../assets/images/leader1.png'
+import leader2 from '../assets/images/leader2.png'
+import leader3 from '../assets/images/leader3.png'
+import leader4 from '../assets/images/leader4.png'
 const About = () => {
   const values = [
     {
@@ -20,19 +24,23 @@ const About = () => {
     {
       name: "Alex Johnson",
       position: "CEO & Founder",
-      year: "New Zealand Product 2020"
+      year: "New Zealand Product 2020",
+      images: leader1
     },
     {
       name: "Maria Garcia",
-      position: "Chief Technology Officer"
+      position: "Chief Technology Officer",
+      images: leader2
     },
     {
       name: "David Chen",
-      position: "Head of Design"
+      position: "Head of Design",
+      images: leader3
     },
     {
       name: "Sarah Lee",
-      position: "VP of Engineering"
+      position: "VP of Engineering",
+      images: leader4
     }
   ];
 
@@ -160,7 +168,15 @@ const About = () => {
                   color: 'rgba(255, 255, 255, 0.7)',
                   fontSize: '0.9rem'
                 }}>
-                  Photo
+                  <img
+                    src={member.images}
+                    alt={member.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
                 </div>
                 
                 <h4 style={{

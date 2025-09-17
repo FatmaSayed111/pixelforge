@@ -1,30 +1,42 @@
 import React from 'react';
+import work1 from '../assets/images/work1.png'
+import work2 from '../assets/images/work2.png'
+import work3 from '../assets/images/work3.png'
+import work4 from '../assets/images/work4.png'
+import work5 from '../assets/images/work5.png'
+import work6 from '../assets/images/work6.png'
 
 const Work = () => {
   const projects = [
     {
       title: "NextGen Banking App",
-      category: "FinTech"
+      category: "FinTech",
+      images: work1
     },
     {
       title: "ProjectFlow Analytics",
-      category: "SaaS"
+      category: "SaaS",
+      images: work2
     },
     {
       title: "Tekebooth Connect",
-      category: "Healthcare"
+      category: "Healthcare",
+      images: work3
     },
     {
       title: "Cumfumi Cap Retrend",
-      category: "E-commerce"
+      category: "E-commerce",
+      images: work4
     },
     {
       title: "EcoRoute Planner",
-      category: "Logistics"
+      category: "Logistics",
+      images: work5
     },
     {
       title: "HealthTrack Pro",
-      category: "Healthcare"
+      category: "Healthcare",
+      images: work6
     }
   ];
 
@@ -72,17 +84,16 @@ const Work = () => {
               border: '1px solid #2a3a52',
               backdropFilter: 'blur(10px)'
             }}>
-              <div style={{
-                height: '250px',
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'rgba(255, 255, 255, 0.7)',
-                fontWeight: '600'
-              }}>
-                Project Image
-              </div>
+               <img 
+                src={project.images} 
+                alt={project.title} 
+                style={{
+                  width: '100%',
+                  height: '250px',
+                  objectFit: 'cover'
+                }} 
+              />
+             
               
               <div style={{ padding: '20px' }}>
                 <h3 style={{

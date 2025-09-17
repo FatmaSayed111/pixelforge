@@ -1,21 +1,26 @@
 import React from 'react';
+import service1 from '../assets/images/service1.png'
+import service2 from '../assets/images/service2.png'
+import service3 from '../assets/images/service3.png'
+
+
 
 const Services = () => {
   const services = [
     {
       title: "Enterprise Software",
       description: "Custom software solutions to streamline your operations, enhance productivity, and drive growth at scale.",
-      icon: "💼"
+      images: service1
     },
     {
       title: "Customer-Facing Platforms",
       description: "Engaging web and mobile applications that deliver seamless user experiences and build lasting customer relationships.",
-      icon: "📱"
+      images: service2
     },
     {
       title: "Digital Transformation",
       description: "Modernizing legacy systems and integrating cutting-edge technology to future-proof your business.",
-      icon: "🔄"
+      images: service3
     }
   ];
 
@@ -64,9 +69,18 @@ const Services = () => {
               backdropFilter: 'blur(10px)'
             }}>
               <div style={{
-                fontSize: '3rem',
                 marginBottom: '25px'
-              }}>{service.icon}</div>
+              }}>
+               <img
+               src={service.images}
+               alt={service.title}
+               style={{
+                width: '80%',
+                height: '80%',
+                objectFit: 'contain'
+               }}
+               />
+              </div>
               
               <h3 style={{
                 fontSize: '1.5rem',

@@ -60,7 +60,7 @@ const Work = () => {
         <p style={{
           fontSize: '1.3rem',
           textAlign: 'center',
-          marginBottom: '60px',
+          marginBottom: '100px', // زودنا المسافة بين النص والصور
           color: 'rgba(255, 255, 255, 0.8)',
           lineHeight: '1.6',
           maxWidth: '800px',
@@ -76,35 +76,52 @@ const Work = () => {
           marginBottom: '80px'
         }}>
           {projects.map((project, index) => (
-            <div key={index} style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              transition: 'transform 0.3s',
-              border: '1px solid #2a3a52',
-              backdropFilter: 'blur(10px)'
-            }}>
-               <img 
+            <div 
+              key={index} 
+              style={{
+                position: 'relative',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                border: '1px solid #2a3a52',
+                backdropFilter: 'blur(10px)',
+                cursor: 'pointer',
+                transition: 'transform 0.3s, box-shadow 0.3s'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+                e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.5)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <img 
                 src={project.images} 
                 alt={project.title} 
                 style={{
                   width: '100%',
                   height: '250px',
-                  objectFit: 'cover'
+                  objectFit: 'cover',
+                  transition: 'transform 0.3s'
                 }} 
               />
-             
               
-              <div style={{ padding: '20px' }}>
+              <div style={{
+                position: 'absolute',
+                bottom: '20px',
+                left: '20px',
+                color: '#ffffff',
+                textShadow: '0 2px 5px rgba(0,0,0,0.7)'
+              }}>
                 <h3 style={{
                   fontSize: '1.4rem',
-                  marginBottom: '10px',
-                  color: '#ffffff'
+                  marginBottom: '8px'
                 }}>{project.title}</h3>
-                
                 <p style={{
                   color: '#2fbb8b',
-                  fontWeight: '600'
+                  fontWeight: '600',
+                  margin: 0
                 }}>{project.category}</p>
               </div>
             </div>

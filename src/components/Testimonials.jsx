@@ -20,7 +20,7 @@ const Testimonials = () => {
           lineHeight: '1.6',
           fontWeight: '500'
         }}>
-          "PixelForge didn't just build us an app; they engineered a core part of our business. Their understanding of the FinTech landscape was invaluable."
+          "ICoreSoft didn't just build us an app; they engineered a core part of our business. Their understanding of the FinTech landscape was invaluable."
         </blockquote>
         
         <div style={{

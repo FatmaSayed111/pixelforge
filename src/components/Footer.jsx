@@ -24,7 +24,7 @@ const Footer = () => {
               fontWeight: 'bold',
               marginBottom: '20px',
               color: '#2fbb8b'
-            }}>PixelForge</h3>
+            }}>ICoreSoft</h3>
             
             <p style={{
               color: 'rgba(255, 255, 255, 0.7)',
@@ -134,7 +134,7 @@ const Footer = () => {
             color: 'rgba(255, 255, 255, 0.7)',
             fontSize: '1.1rem'
           }}>
-            © 2025 PixelForge. All rights reserved.
+            © 2025 ICoreSoft. All rights reserved.
           </p>
         </div>
       </div>

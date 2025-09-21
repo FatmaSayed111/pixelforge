@@ -202,7 +202,7 @@ const Contact = () => {
                 lineHeight: '1.6',
                 fontSize: '1.1rem',
                 marginBottom: '10px'
-              }}>contact@pixelforge.dev</p>
+              }}>contact@ICoreSoft.dev</p>
               
               <p style={{
                 color: 'rgba(255, 255, 255, 0.8)',

@@ -1,32 +1,34 @@
+import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom';
 import React from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Industries from './components/Industries';
-import Process from './components/Process';
-import Work from './components/Work';
-import About from './components/About';
-import Insights from './components/Insights';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import Home from "./pages/Home";
+import AboutPage from "./pages/About";
+import WorkPage from "./pages/Work";
+import IndustriesPage from "./pages/Industries";
+import InsightsPage from "./pages/Insights";
+import SolutionsPage from "./pages/Solutions";
+import ContactPage from "./pages/Contact";
 import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Services />
-      <Industries />
-      <Process />
-      <Work />
-      <About />
-      <Insights />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<AboutPage />} />
+  <Route path="/solutions" element={<SolutionsPage />} />
+  <Route path="/industries" element={<IndustriesPage />} />
+  <Route path="/insights" element={<InsightsPage />} />
+  <Route path="/work" element={<WorkPage />} />
+  <Route path="/contact" element={<ContactPage />} />
+</Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -105,15 +105,13 @@ const Header = () => {
         <NavLink
           to="/contact"
           style={{
-            backgroundColor: "#2fbb8b", // نفس لون الأزرار عندك
-            padding: "10px 20px",       // خليها زي زرار View Our Work
-            borderRadius: "30px",       // نفس ال-radius
+            backgroundColor: "#2fbb8b", 
             color: "#fff",
             fontWeight: "500",
             textDecoration: "none",
             transition: "background 0.3s",
             ...(location.pathname === "/contact"
-              ? { boxShadow: "0 0 0 2px #fff inset" } // يوضح إنك واقفة هنا
+              ? { boxShadow: "0 0 0 2px #fff inset" } 
               : {}),
           }}
         >

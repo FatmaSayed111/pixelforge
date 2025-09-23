@@ -1,6 +1,5 @@
 import React from 'react';
 
-// استيراد الصور
 import  industries1 from '../assets/images/logo industries1.png';
 import  industries2 from '../assets/images/logo industries2.png';
 import  industries3 from '../assets/images/logo industries3.png';
@@ -68,7 +67,9 @@ const Industries = () => {
           maxWidth: '800px',
           margin: '0 auto 80px'
         }}>
-          We combine deep industry knowledge with technical expertise to deliver solutions that address the unique challenges of your sector.
+          We combine deep industry knowledge with technical expertise 
+          to deliver solutions that address the unique challenges
+           of your sector.
         </p>
         
         <div style={{

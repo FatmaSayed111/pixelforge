@@ -56,6 +56,7 @@ const Contact = () => {
           gap: '60px',
           alignItems: 'start'
         }}>
+          {/* Contact Form */}
           <div style={{
             backgroundColor: 'rgba(255, 255, 255, 0.05)',
             padding: '40px',
@@ -75,93 +76,73 @@ const Contact = () => {
               flexDirection: 'column',
               gap: '20px'
             }}>
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  style={{
-                    padding: '15px',
-                    border: '1px solid #2a3a52',
-                    borderRadius: '8px',
-                    fontSize: '1.1rem',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    color: '#ffffff'
-                  }}
-                />
-              </div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                style={{
+                  padding: '15px',
+                  border: '1px solid #2a3a52',
+                  borderRadius: '8px',
+                  fontSize: '1.1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#ffffff'
+                }}
+              />
               
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  style={{
-                    padding: '15px',
-                    border: '1px solid #2a3a52',
-                    borderRadius: '8px',
-                    fontSize: '1.1rem',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    color: '#ffffff'
-                  }}
-                />
-              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                style={{
+                  padding: '15px',
+                  border: '1px solid #2a3a52',
+                  borderRadius: '8px',
+                  fontSize: '1.1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#ffffff'
+                }}
+              />
               
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <input
-                  type="text"
-                  name="company"
-                  placeholder="Company (Optional)"
-                  value={formData.company}
-                  onChange={handleChange}
-                  style={{
-                    padding: '15px',
-                    border: '1px solid #2a3a52',
-                    borderRadius: '8px',
-                    fontSize: '1.1rem',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    color: '#ffffff'
-                  }}
-                />
-              </div>
+              <input
+                type="text"
+                name="company"
+                placeholder="Company (Optional)"
+                value={formData.company}
+                onChange={handleChange}
+                style={{
+                  padding: '15px',
+                  border: '1px solid #2a3a52',
+                  borderRadius: '8px',
+                  fontSize: '1.1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#ffffff'
+                }}
+              />
               
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <textarea
-                  name="message"
-                  placeholder="Project Details"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  style={{
-                    padding: '15px',
-                    border: '1px solid #2a3a52',
-                    borderRadius: '8px',
-                    fontSize: '1.1rem',
-                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    color: '#ffffff',
-                    minHeight: '150px',
-                    resize: 'vertical'
-                  }}
-                ></textarea>
-              </div>
+              <textarea
+                name="message"
+                placeholder="Project Details"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                style={{
+                  padding: '15px',
+                  border: '1px solid #2a3a52',
+                  borderRadius: '8px',
+                  fontSize: '1.1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#ffffff',
+                  minHeight: '150px',
+                  resize: 'vertical'
+                }}
+              ></textarea>
               
               <button type="submit" style={{
                 padding: '15px 30px',
@@ -179,6 +160,7 @@ const Contact = () => {
             </form>
           </div>
           
+          {/* Contact Info + Map */}
           <div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -227,11 +209,24 @@ const Contact = () => {
               <p style={{
                 color: 'rgba(255, 255, 255, 0.8)',
                 lineHeight: '1.6',
-                fontSize: '1.1rem'
+                fontSize: '1.1rem',
+                marginBottom: '20px'
               }}>
                 123 Innovation Drive<br />
                 Suite 404, Tech City, 54321
               </p>
+
+              {/* Google Maps Embed */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_LINK"
+                width="100%"
+                height="250"
+                style={{ border: 0, borderRadius: '8px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="office-map"
+              ></iframe>
             </div>
           </div>
         </div>

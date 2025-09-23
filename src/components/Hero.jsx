@@ -92,7 +92,7 @@ const Hero = () => {
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '30px',
+            gap: '40px',
             flexWrap: 'wrap',
             alignItems: 'center'
           }}>
@@ -103,22 +103,10 @@ const Hero = () => {
                 alignItems: 'center',
                 gap: '8px'
               }}>
-                <div style={{
-                  padding: '15px',
-                  borderRadius: '12px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.3s',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)'
-                }}>
-                  <Icon style={{
-                    fontSize: '2rem',
-                    color: '#ffffff'
-                  }} />
-                </div>
+                <Icon style={{
+                  fontSize: '2.5rem',
+                  color: '#ffffff'
+                }} />
                 <span style={{
                   color: 'rgba(255, 255, 255, 0.7)',
                   fontSize: '0.9rem',
